@@ -16,11 +16,11 @@
     },
     {
       "id": "2",
-      "title": "Front-End Engineer (React & Redux)",
-      "type": "Full-Time",
+      "title": "Front-End Developer (React & Redux)",
+      "salary": "$70K - $80K",
+      "type": "Remote",
       "location": "Miami, FL",
       "description": "Join our team as a Front-End Developer in sunny Miami, FL. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
-      "salary": "$70K - $80K",
       "company": {
         "name": "Veneer Solutions",
         "description": "Veneer Solutions is a creative agency specializing in digital design and development. Our team is dedicated to pushing the boundaries of creativity and innovation to deliver exceptional results for our clients.",
@@ -82,6 +82,20 @@
         "description": "Port Solutions is a leading technology company specializing in software development and digital marketing. We are committed to providing our clients with cutting-edge solutions and our employees with a supportive and rewarding work environment.",
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "8b09",
+      "title": "Laravel & React Dev",
+      "salary": "$100K - 125K",
+      "type": "Internship",
+      "location": "NewYork, US",
+      "description": "Dynamically morph economically sound web services before virtual scenarios. Efficiently fashion error-free e-markets via state of the art mindshare. Dramatically utilize cross-media mindshare vis-a-vis parallel \"outside the.",
+      "company": {
+        "name": "AluTech Technologies",
+        "description": "Efficiently initiate value-added benefits before cross-platform vortals. Interactively conceptualize team driven e-commerce through sticky technologies. Professionally plagiarize quality outsourcing without market-driven testing procedures. Monotonectally redefine functionalized manufactured.",
+        "contactEmail": "alutech@gmail.com",
+        "contactPhone": "444-4555-7778"
       }
     }
   ]

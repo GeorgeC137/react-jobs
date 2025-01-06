@@ -1,14 +1,28 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useParams, useLoaderData } from "react-router-dom";
+import { useParams, useLoaderData, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
 
-const JobPage = () => {
+const JobPage = ({ deleteJob }) => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const job = useLoaderData();
   const [loading, setLoading] = useState(true);
+
+  const onDeleteClick = (jobId) => {
+    const confirm = window.confirm("Are you sure you want to delete this job?");
+
+    if (!confirm) return;
+
+    deleteJob(jobId);
+
+    toast.success("Job deleted successfully");
+
+    navigate("/jobs");
+  };
 
   //   useEffect(() => {
   //     const fetchJob = async () => {
@@ -46,7 +60,7 @@ const JobPage = () => {
                 <h1 className="text-3xl font-bold mb-4">{job.title}</h1>
                 <div className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
                   <FaMapMarker className="text-orange-700 mr-2" />
-                  <p className="text-orange-700">Boston, MA</p>
+                  <p className="text-orange-700">{job.location}</p>
                 </div>
               </div>
 
@@ -96,7 +110,10 @@ const JobPage = () => {
                 >
                   Edit Job
                 </Link>
-                <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+                <button
+                  onClick={() => onDeleteClick(job.id)}
+                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                >
                   Delete Job
                 </button>
               </div>
